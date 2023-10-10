@@ -21,6 +21,9 @@ jobs:
       - name: Update README
         run: node generate-readme.mjs
 
+      - name: Format README
+        run: npx prettier --write README.md
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
